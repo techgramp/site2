@@ -1,54 +1,91 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <link href="favicon.ico" rel="icon" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css">
-  <meta charset="utf-8">
-  <title>Hey Dood Dog Grooming</title>
-</head>
-<body>
-  <main>
-    <h1>Hey Dood Dog Grooming</h1>
-    <nav>
-      <b>
-        <a href="tel:717-344-7840">Call (717) 344-7840</a>
-        <a href="https://goo.gl/maps/6ZgZF5pvLfQk9Qog9">Directions</a>
-        <a href="https://www.facebook.com/chiendamourllc/">Facebook</a>
-      </b>
-    </nav>
-    
-    <section id="bio">
-      <h2>About Us</h2>
-      <p>It was a leap of faith to leave the corporate
-        world and begin pet grooming. It was my
-        passion and I wanted to pursue it. I never
-        looked back after receiving my Groomers
-        Certification. The service industry was a
-        perfect fit for me. I started grooming in
-        Alpharetta, GA and was there for almost
-        20 years. From puppies to senior dogs,
-        and comfort grooms for the infirmed pets.
-        I always enjoyed going to work. I
-        understand the client, groomer, pet
-        relationship. You want someone you can
-        trust. Someone compassionate, someone
-        in for the long term, someone with heart.
-        Hey Dood Pet Grooming is proud to
-        provide these services for Camden
-        County.</p>
-    </section>
-    
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <div class="image-container">
-        <img src="1.jpg" alt="Happy groomed dog">
-        <img src="2.jpg" alt="Freshly groomed pup">
-        <img src="3.jpg" alt="Dog styling session">
-        <img src="4.jpg" alt="Dog styling session">
-        <img src="5.jpg" alt="Dog styling session">
-        <img src="6.jpg" alt="Dog styling session">
+  <head>
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Hey Dood Pet Grooming</title>
+  </head>
+  <body>
+    <main>
+      <h1>Hey Dood Pet Grooming</h1>
+      <div id="logo">
       </div>
+      <nav>
+        <b>
+          <a href="tel:7705009272">Call (770) 500-9272</a>
+          <a href="https://goo.gl/maps/6ZgZF5pvLfQk9Qog9">Directions</a>
+          <a href="https://www.facebook.com/share/1X5U2sb6jT">Facebook</a>
+        </b>
+      </nav>
+      <section id="bio">
+        <div class="bio-container">
+    
+          <div class="bio-text">
+            <p><b>About Gerri:</b> It was a leap of faith to leave the corporate
+              world and begin pet grooming. It was my
+              passion and I wanted to pursue it. I never
+              looked back after receiving my Groomers
+              Certification. The service industry was a
+              perfect fit for me. I started grooming in
+              Alpharetta, GA and was there for almost
+              20 years. From puppies to senior dogs,
+              and comfort grooms for the infirmed pets.
+              I always enjoyed going to work. I
+              understand the client, groomer, pet
+              relationship. You want someone you can
+              trust. Someone compassionate, someone
+              in for the long term, someone with heart.
+              Hey Dood Pet Grooming is proud to
+              provide these services for Camden
+              County.</p>
+          </div>
+          <div class="bio-image">
+            <img src="7.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+          </div>
+        </div>
+      </section>
+      
+      <section id="gallery">
+        <div class="image-container">
+            <img src="1.jpg" alt="Happy groomed dog" onclick="openLightbox(this)">
+            <img src="2.jpg" alt="Freshly groomed pup" onclick="openLightbox(this)">
+            <img src="3.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+            <img src="4.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+            <img src="5.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+            <img src="6.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+            <img src="8.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+            <img src="9.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+            <img src="10.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+            <img src="11.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+            <img src="12.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+            <img src="19.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+            <img src="14.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+            <img src="15.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+            <img src="16.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+            <img src="17.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+            <img src="18.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+            <img src="20.jpg" alt="Dog styling session" onclick="openLightbox(this)">
+        </div>
     </section>
-  </main>
-</body>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <span class="lightbox-close" onclick="closeLightbox()">X</span>
+      <img id="lightbox-img" src="" alt="">
+  </div>
+
+    <script>
+        function openLightbox(imgElement) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imgElement.src;
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+    </script>
+    </main>
+  </body>
 </html>
